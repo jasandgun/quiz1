@@ -399,6 +399,16 @@ nav #menu li a:hover {
     text-align: left;
 }
 
+.hero-content a {
+    color: var(--text);
+    text-decoration: none;
+}
+
+.hero-content a:hover {
+    color: var(--text);
+    text-decoration: underline var(--text);
+}
+
 @media(max-width: 768px) {
     .hero-content {
         padding-top: 50px;
@@ -410,7 +420,10 @@ nav #menu li a:hover {
 /*---------------about page --------------- */
 
 .about {
-    height: 500px;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    /* height: 50%; */
     margin-top: 120px;
 }
 
