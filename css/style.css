@@ -1,12 +1,25 @@
 /*--------------- basic styles --------------- */
+body.light {
+    --text: black;
+    --background: white;
+    --terminalcol: 2px solid rgba(0, 0, 0, 0.75);
+    --linebg: rgba(0, 0, 0, 0.2);
+}
+body.dark {
+    --text: white;
+    --background: black;
+    --terminalcol: 2px solid rgba(255, 255, 255, 0.75);
+    --linebg: rgba(255, 255, 255, 0.2);
+}
+
 html, body {
     margin: 0;
     padding: 0;
     width: 100%;
     height: 100%;
     font-family: "Roboto Mono" !important;
-    background: #ffffff !important;
-    color: #000 !important;
+    background: var(--background) !important;
+    color: var(--text) !important;
 }
 
 .whitespace {
@@ -25,7 +38,7 @@ html, body {
     width: 24em;
     top: 50%;
     margin: auto;
-    border-right: 2px solid rgba(0, 0, 0, 0.75);
+    border-right: var(--terminalcol);
     text-align: center;
     white-space: nowrap;
     overflow: hidden;
@@ -61,7 +74,7 @@ html, body {
 
 @keyframes blinkTextCursor {
     from {
-          border-right-color: rgba(0, 0, 0, 0.75);
+          border-right-color: var(--terminalcol);
     }
     to {
           border-right-color: transparent;
@@ -71,7 +84,7 @@ html, body {
 /*--------------- navigation --------------- */
 nav {
     width: 100%;
-    background: #ffffff;
+    background: var(--background);
     height: 80px;
     position: fixed;
     z-index: 1;
@@ -86,7 +99,7 @@ nav #brand {
 }
 
 nav #brand a {
-    color: #000;
+    color: var(--text);
     transition: all 0.3s ease-out;
 }
 
@@ -115,7 +128,7 @@ nav #menu li span {
 }
 
 nav #menu li a {
-    color: #000;
+    color: var(--text);
 }
 
 nav #menu li a:hover {
@@ -151,7 +164,7 @@ nav #menu li a:hover {
     z-index: 1;
     top: 0px;
     position: fixed;
-    background: #ffffff;
+    background: var(--background);
     width: 100%;
     height: 100%;
     visibility: hidden;
@@ -185,7 +198,7 @@ nav #menu li a:hover {
 }
 
 #resize #menu li a {
-    color: #000;
+    color: var(--text);
 }
 
 #resize #menu li a:hover {
@@ -264,8 +277,8 @@ nav #menu li a:hover {
     text-shadow: 0;
     width: 13px;
     height: 13px;
-    border-bottom: 2px solid #000;
-    border-right: 2px solid #000;
+    border-bottom: 2px solid var(--text);
+    border-right: 2px solid var(--text);
     -webkit-transform: translate(-50%, 0) rotate(45deg);
     transform: translate(-50%, 0) rotate(45deg);
     animation: fade_move_down 3s cubic-bezier(0.19, 1, 0.22, 1) infinite;
@@ -296,7 +309,7 @@ nav #menu li a:hover {
 }
 
 .hr {
-    background: rgba(0, 0, 0, 0.2);
+    background: var(--linebg);
     height: 1px;
 }
 
@@ -306,13 +319,13 @@ nav #menu li a:hover {
 }
 
 .info a{
-    color: #000;
+    color: var(--text);
     text-decoration: none;
 }
 
 .info a:hover{
-    color: #000;
-    text-decoration: underline black;
+    color: var(--text);
+    text-decoration: underline var(--text);
 }
 
 .info p {
@@ -322,7 +335,7 @@ nav #menu li a:hover {
 
 .info li {
     font-weight: lighter;
-    color: #000;
+    color: var(--text);
     font-size: 18px;
     padding-left: 20px;
 }
@@ -403,91 +416,4 @@ nav #menu li a:hover {
 
 .image {
     background: url(https://images.unsplash.com/photo-1540885762261-a2ca01f290f9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2468&q=80) no-repeat 50% 70%;
-}
-
-/*--------------- contact form --------------- */
-
-#contact-form {
-    margin: 5% 1.4%;
-}
-
-#contact-form ul {
-    list-style: none;
-    border-radius: 5px;
-    margin-bottom: 40px;
-}
-
-#contact-form li {
-    padding: 10px;
-}
-
-#contact-form li:last-of-type {
-    border-bottom: none;
-}
-
-#contact-form label {
-    display: block;
-    font-size: .8em;
-    color: #999;
-    padding-left: 5px;
-}
-
-#contact-form input, #contact-form textarea {
-    width: 100%;
-    padding: 5px;
-    border: none;
-    resize: vertical;
-    background: transparent;
-    color: #000;
-    font-weight: bolder;
-}
-
-input:focus {
-    outline: none;
-    border: none;
-}
-
-textarea:focus {
-    outline: none;
-    border: none;
-}
-
-.textarea {
-    border-bottom: 1px solid #dfdfdf;
-}
-
-.send {
-    margin-left: 50px;
-    text-transform: uppercase;
-    padding: 20px 30px;
-    background: transparent;
-    color: #dfdfdf;
-    font-size: 14px;
-    letter-spacing: 2px;
-}
-
-.send:hover {
-    background: #dfdfdf;
-    color: #101010;
-}
-
-@media(max-width: 768px) {
-    #contact-form {
-          margin: 5% -8%;
-          width: 98%;
-    }
-}
-
-/*--------------- project page --------------- */
-
-.prev, .next p {
-    color: grey;
-}
-
-.prev p {
-    text-align: left;
-}
-
-.next p {
-    text-align: right;
 }
