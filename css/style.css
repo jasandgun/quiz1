@@ -225,7 +225,7 @@ nav #menu li a:hover {
 
 @media(min-width: 768px) {
     #resize {
-          visibility: hidden !important;
+        visibility: hidden !important;
     }
 }
 
@@ -304,10 +304,17 @@ nav #menu li a:hover {
     font-size: 18px;
     font-weight: lighter;
 }
+
 .info a{
     color: #000;
     text-decoration: none;
 }
+
+.info a:hover{
+    color: #000;
+    text-decoration: underline black;
+}
+
 .info p {
     color: grey;
     font-weight: lighter;

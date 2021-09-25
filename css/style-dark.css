@@ -304,10 +304,17 @@ nav #menu li a:hover {
     font-size: 18px;
     font-weight: lighter;
 }
+
 .info a{
     color: #fff;
     text-decoration: none;
 }
+
+.info a:hover{
+    color: #fff;
+    text-decoration: underline white;
+}
+
 .info p {
     color: grey;
     font-weight: lighter;
