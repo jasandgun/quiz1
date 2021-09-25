@@ -10,20 +10,6 @@
 
     <!-- stylesheet -->
     <link rel="stylesheet" href="css/style.css" id="theme-sheet">
-    <!-- theme -->
-    <script type="text/javascript">
-        window.onload = function() {
-            const themesheet = document.querySelector("#theme-sheet");
-            var a = document.getElementById("theme-home");
-            a.onclick = function() {
-                if (themesheet.getAttribute("href") == "css/style.css") {
-                    themesheet.href = "css/style-dark.css";                    
-                } else {
-                    themesheet.href = "css/style.css";
-                }
-            }
-        };
-    </script>
     <!-- bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
@@ -32,7 +18,7 @@
     <!-- terminal effect -->
     <script src="js/t.min.js"></script>
     <!-- for on scroll animations -->
-    <link rel="stylesheet" href="animate.css">
+    <link rel="stylesheet" href="css/animate.css">
     <script src="js/wow.min.js"></script>
 </head>
 
@@ -142,6 +128,18 @@
     
     <!-- JS scripts -->
     <script type="text/javascript">
+        // theme
+        window.onload = function() {
+            const themesheet = document.querySelector("#theme-sheet");
+            var a = document.getElementById("theme-home");
+            a.onclick = function() {
+                if (themesheet.getAttribute("href") == "css/style.css") {
+                    themesheet.href = "css/style-dark.css";                    
+                } else {
+                    themesheet.href = "css/style.css";
+                }
+            }
+        };
         // navigation start
         $("#toggle").click(function() {
             $(this).toggleClass('on');
