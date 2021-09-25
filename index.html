@@ -7,8 +7,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jason's Portfolio</title>
 
+
     <!-- stylesheet -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css" id="theme-sheet">
+    <!-- theme -->
+    <script type="text/javascript">
+        window.onload = function() {
+            const themesheet = document.querySelector("#theme-sheet");
+            var a = document.getElementById("theme-home");
+            a.onclick = function() {
+                if (themesheet.getAttribute("href") == "css/style.css") {
+                    themesheet.href = "css/style-dark.css";                    
+                } else {
+                    themesheet.href = "css/style.css";
+                }
+            }
+        };
+    </script>
     <!-- bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
@@ -27,7 +42,7 @@
         <!-- navbar start -->
         <nav>
             <span id="brand">
-                <a href="index.html">jasongunawan</a>
+                <a href="#" id="theme-home">jasongunawan</a>
             </span>
             <ul id="menu">
                 <li><a href="index.html">home<span>.</span></a></li>
@@ -125,37 +140,36 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     
-    <!-- JS script for WOW.js -->
+    <!-- JS scripts -->
     <script type="text/javascript">
         // navigation start
         $("#toggle").click(function() {
-              $(this).toggleClass('on');
-              $("#resize").toggleClass("active");
+            $(this).toggleClass('on');
+            $("#resize").toggleClass("active");
         });
   
         $("#resize ul li a").click(function() {
-              $(this).toggleClass('on');
-              $("#resize").toggleClass("active");
+            $(this).toggleClass('on');
+            $("#resize").toggleClass("active");
         });
   
         $(".close-btn").click(function() {
-              $(this).toggleClass('on');
-              $("#resize").toggleClass("active");
+            $(this).toggleClass('on');
+            $("#resize").toggleClass("active");
         });
         // navigation end
   
         // nav animation
         TweenMax.from("#brand", 1, {
-              delay: 0.4,
-              y: 10,
-              opacity: 0,
-              ease: Expo.easeInOut
+            delay: 0.1,
+            y: 10,
+            opacity: 0,
+            ease: Expo.easeInOut
         })
-  
         TweenMax.staggerFrom("#menu li a", 1, {
-              delay: 0.4,
-              opacity: 0,
-              ease: Expo.easeInOut
+            delay: 0.1,
+            opacity: 0,
+            ease: Expo.easeInOut
         }, 0.1);
         // nav animation end
         new WOW().init();
