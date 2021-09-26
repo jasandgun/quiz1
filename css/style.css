@@ -427,7 +427,7 @@ nav #menu li a:hover {
     margin-top: 120px;
 }
 
-/*--------------- gallery section --------------- */
+/*--------------- gallery for hometown section --------------- */
 h6 {
     text-align: center;
 }
@@ -445,7 +445,7 @@ h6 {
 }
 
 .gallery1 {
-    background: url(../assets/malang1.jpg) no-repeat 50% 50%;
+    background: url(../assets/hometown/malang1.jpg) no-repeat 50% 50%;
     background-size: cover;
 }
 .gallery1::after {
@@ -462,7 +462,7 @@ h6 {
 }
 
 .gallery2 {
-    background: url(../assets/malang2.jpg) no-repeat 70% 90%;
+    background: url(../assets/hometown/malang2.jpg) no-repeat 70% 90%;
     background-size: cover;
 }
 .gallery2::after {
@@ -479,7 +479,7 @@ h6 {
 }
 
 .gallery3 {
-    background: url(../assets/malang3.jpg) no-repeat 50% 50%;
+    background: url(../assets/hometown/malang3.jpg) no-repeat 50% 50%;
     background-size: cover;
 }
 .gallery3::after {
@@ -505,6 +505,65 @@ h6 {
         display: none;
     }
     .gallery1::after, .gallery2::after, .gallery3::after {
+        display: none;
+  }
+}
+
+
+/*--------------- gallery for food section --------------- */
+.food1 {
+    background: url(../assets/food/bakso.jpg) no-repeat 50% 50%;
+    background-size: cover;
+}
+.food1::after {
+    content: "bakso malang";
+    font-family: "Roboto Mono";
+    font-size: 36px;
+    position: relative;
+    color: var(--text);
+    display: block;
+    top: 90%;
+    left: 110%;
+    right: 0;
+    bottom: 0;
+}
+
+.food2 {
+    background: url(../assets/food/cwie-mie.jpg) no-repeat 70% 90%;
+    background-size: cover;
+}
+.food2::after {
+    content: "cwie mie malang";
+    font-family: "Roboto Mono";
+    font-size: 36px;
+    position: relative;
+    color: var(--text);
+    display: block;
+    top: 90%;
+    left: -50%;
+    right: 0;
+    bottom: 0;
+}
+
+.food3 {
+    background: url(../assets/food/pecel.jpg) no-repeat 50% 50%;
+    background-size: cover;
+}
+.food3::after {
+    content: "pecel malang";
+    font-family: "Roboto Mono";
+    font-size: 36px;
+    position: relative;
+    color: var(--text);
+    display: block;
+    top: 90%;
+    left: 105%;
+    right: 0;
+    bottom: 0;
+}
+
+@media(max-width: 768px) {
+    .food1::after, .food2::after, .food3::after {
         display: none;
   }
 }
