@@ -3,7 +3,7 @@
 [the website.](https://jasandgun.github.io/quiz1/)
 
 ## first look
-switch between modes by clicking on `jasandgun`
+switch between modes by clicking on `jasongunawan`
 > intro page, dark and light
 
 <img alt="" src="assets/docs/intro-dark.png" width="50%" height="50%"><img alt="" src="assets/docs/intro-light.png" width="50%" height="50%">
