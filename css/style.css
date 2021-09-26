@@ -383,7 +383,7 @@ nav #menu li a:hover {
     }
 }
 
-/*--------------- work page --------------- */
+/*--------------- main content --------------- */
 
 .hero-content {
     margin-left: 0%;
@@ -391,7 +391,13 @@ nav #menu li a:hover {
 
 .hero-content p {
     font-weight: 300;
-    line-height: 36px;
+    line-height: 30px;
+    color: grey;
+}
+
+.hero-content ul {
+    font-weight: 300;
+    line-height: 18px;
     color: grey;
 }
 
@@ -564,6 +570,80 @@ h6 {
 
 @media(max-width: 768px) {
     .food1::after, .food2::after, .food3::after {
+        display: none;
+  }
+}
+/*--------------- gallery for attractions section --------------- */
+.attraction1 {
+    background: url(../assets/tourist/jatimpark.jpg) no-repeat 50% 50%;
+    background-size: cover;
+}
+.attraction1::after {
+    content: "Jawa Timur Park 2";
+    font-family: "Roboto Mono";
+    font-size: 36px;
+    position: relative;
+    color: var(--text);
+    display: block;
+    top: 90%;
+    left: 110%;
+    right: 0;
+    bottom: 0;
+}
+
+.attraction2 {
+    background: url(../assets/tourist/museum.jpg) no-repeat 70% 90%;
+    background-size: cover;
+}
+.attraction2::after {
+    content: "Brawijaya Museum";
+    font-family: "Roboto Mono";
+    font-size: 36px;
+    position: relative;
+    color: var(--text);
+    display: block;
+    top: 90%;
+    left: -55%;
+    right: 0;
+    bottom: 0;
+}
+
+.attraction3 {
+    background: url(../assets/tourist/night.jpg) no-repeat 50% 50%;
+    background-size: cover;
+}
+.attraction3::after {
+    content: "Malang Night Paradise";
+    font-family: "Roboto Mono";
+    font-size: 36px;
+    position: relative;
+    color: var(--text);
+    display: block;
+    top: 90%;
+    left: 105%;
+    right: 0;
+    bottom: 0;
+}
+
+.attraction4 {
+    background: url(../assets/tourist/flower.jpg) no-repeat 70% 90%;
+    background-size: cover;
+}
+.attraction4::after {
+    content: "Batu Flower Garden";
+    font-family: "Roboto Mono";
+    font-size: 36px;
+    position: relative;
+    color: var(--text);
+    display: block;
+    top: 90%;
+    left: -60%;
+    right: 0;
+    bottom: 0;
+}
+
+@media(max-width: 768px) {
+    .attraction1::after, .attraction2::after, .attraction3::after, .attraction4::after {
         display: none;
   }
 }
