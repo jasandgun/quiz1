@@ -15,7 +15,7 @@ window.onload = function() {
     const currentTheme = localStorage.getItem("theme");
     if (currentTheme == "dark") {
         document.body.classList.toggle("dark");
-    } else if (currentTheme == "light") {
+    } else {
         document.body.classList.toggle("light");
     }
 
