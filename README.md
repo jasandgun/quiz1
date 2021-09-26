@@ -10,7 +10,7 @@
 > hometown page, dark and light
 
 <img alt="" src="assets/docs/hometown-dark.png" width="50%" height="50%"><img alt="" src="assets/docs/hometown-light.png" width="50%" height="50%">
-#
+
 ## website design inspired by this tutorial:
 [![Complete Responsive Web Design Tutorial](https://img.youtube.com/vi/gKgrdJgEtMA/0.jpg)](https://www.youtube.com/watch?v=gKgrdJgEtMA)
 
