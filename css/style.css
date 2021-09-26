@@ -1,15 +1,29 @@
 /*--------------- basic styles --------------- */
-body.light {
+html, html[css-theme="light"] {
     --text: black;
     --background: white;
     --terminalcol: 2px solid rgba(0, 0, 0, 0.75);
     --linebg: rgba(0, 0, 0, 0.2);
 }
-body.dark {
+html[css-theme="dark"] {
     --text: white;
     --background: black;
     --terminalcol: 2px solid rgba(255, 255, 255, 0.75);
     --linebg: rgba(255, 255, 255, 0.2);
+}
+@media (prefers-color-scheme: dark) {
+    html, html[css-theme="dark"] {
+        --text: white;
+        --background: black;
+        --terminalcol: 2px solid rgba(255, 255, 255, 0.75);
+        --linebg: rgba(255, 255, 255, 0.2);
+    }
+    html[css-theme="light"] {
+        --text: black;
+        --background: white;
+        --terminalcol: 2px solid rgba(0, 0, 0, 0.75);
+        --linebg: rgba(0, 0, 0, 0.2);
+    }
 }
 
 html, body {
